@@ -25,7 +25,7 @@
       </nav>
 
     <div class="d-flex justify-content-center mt-5">
-        <H1><a style="color: red" href="/cars">CARS SHOP</a></H1>
+        <H1><a style="color: rgb(0, 0, 0)" href="/cars">Tu en veux une similaire? Et bah clique tu verras</a></H1>
     </div>   
 
     <div class="d-flex justify-content-center mt-5">

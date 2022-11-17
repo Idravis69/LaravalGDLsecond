@@ -25,23 +25,28 @@
       </nav>
       
       <div class="d-flex justify-content-center mt-5">
-        <h3>Choose a car</h3>
+        <h3>Choisissez un vehicule</h3>
       </div>
 
-      <a href="cars/create">hh</a>
-      <a href="cars/edit">bla</a>
-      
-      <div class="d-flex justify-content-center mt-5 grid grid-cols-4 gap-4">
+      <div class="d-flex justify-content-center mt-5">
+        <h3>ou</h3>
+      </div>
+
+      <div class="d-flex justify-content-center mt-5">
+      <a href="cars/create"><button class="btn btn-info d-flex mt-1">Ajouter un vehicule</button></a>
+      </div>
+
+
+      <div class="d-flex justify-content-center mt-5 grid grid-cols-4 gap-4 flex-wrap">
         
-        <div class="card" style="width: 18rem;">
           @foreach($cars as $car)
           <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{$car->photo}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{$car->categorie}}</h5>
               <p class="card-text">nombre de place:  {{$car->nplaces}} </br> kilometrage:  {{$car->klm}} </br> nombre de porte:  {{$car->nportes}}</p>
-              <a href="cars/{{$car -> id}}" class="d-flex justify-content-center btn btn-success mt-5">Show</a>
-              <a href="{{ url('/cars/' . $car->id . '/edit') }}"><button class="btn btn-primary d-flex mt-1">Edit</button></a>
+              <a href="cars/{{$car -> id}}" class="btn btn-success mt-5">Voir le vehicule</a>
+              <a href="{{ url('/cars/' . $car->id . '/edit') }}"><button class="d-flex justify-content-center btn btn-primary d-flex mt-1">Modifier le vehicule</button></a>
               <form method="POST" action="{{ url('/cars/' . $car->id) }}" accept-charset="UTF-8" style="display:inline">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
