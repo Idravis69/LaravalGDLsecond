@@ -18,7 +18,7 @@ class CarController extends Controller
     {
         $input = $request->all();
         Car::create($input);
-        return redirect('/')->with('flash_message', 'Success!');
+        return redirect('/');
     }
 
     public function show($id)
@@ -52,7 +52,7 @@ class CarController extends Controller
         $cars = Car::find($id);
         $input = $request->all();
         $cars->update($input);
-        return redirect('/')->with('flash_message', 'Success!');
+        return redirect('/');
     }
 
     /**
@@ -64,6 +64,6 @@ class CarController extends Controller
     public function destroy($id)
     {
         Car::destroy($id);
-        return redirect('/')->with('flash_message', 'Success!');
+        return redirect('/');
     }
 }

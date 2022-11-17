@@ -26,10 +26,10 @@
       </nav>
 
 <div class="d-flex justify-content-center mt-5">
-    <h1 class="textq">{{$car->categorie}}</h1>
+    <h1>{{$car->categorie}}</h1>
 </div>  
 <div class="d-flex justify-content-center">
-    <img class="imageshow" src="{{$car->photo}}"/> 
+    <img src="{{$car->photo}}"/> 
 </div>
 <div class="d-flex flex-column justify-content-center mt-3">
     <H4>Voici toutes les caracterisqiue du vehicule ci-dessous :</H4>

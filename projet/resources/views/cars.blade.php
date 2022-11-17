@@ -47,7 +47,7 @@
               <p class="card-text">nombre de place:  {{$car->nplaces}} </br> kilometrage:  {{$car->klm}} </br> nombre de porte:  {{$car->nportes}}</p>
               <a href="cars/{{$car -> id}}" class="btn btn-success mt-5">Voir le vehicule</a>
               <a href="{{ url('/cars/' . $car->id . '/edit') }}"><button class="d-flex justify-content-center btn btn-primary d-flex mt-1">Modifier le vehicule</button></a>
-              <form method="POST" action="{{ url('/cars/' . $car->id) }}" accept-charset="UTF-8" style="display:inline">
+              <form method="POST" action="{{ url('/cars/' . $car->id) }}" accept-charset="UTF-8">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
                 <button type="submit" class="btn btn-danger d-flex mt-1">Supprimer le vehicule</button>
